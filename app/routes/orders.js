@@ -1,11 +1,9 @@
 import Route from '@ember/routing/route';
 import fetch from 'fetch';
-import EmberResolver from 'ember-resolver';
 
 export default class OrdersRoute extends Route {
   async model() {
     let url = "http://files.olo.com/pizzas.json";
-    let val=0;
     let orders;
     let toppings = {};
     let toppingOptions = new Set();
