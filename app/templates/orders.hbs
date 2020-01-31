@@ -1,0 +1,29 @@
+<div class="table-container dark">
+  <section class="section">
+    <div class="hero-body">
+      <h1 class="title  is-centered">Most ordered Pizzas</h1>
+    </div>
+    <div class="box">
+      <table class="table table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+        <thead>
+          <tr>
+            <th><abbr title="Position">Rank</abbr></th>
+            <th>Name</th>
+            <th><abbr title="Points">Num of times ordered</abbr></th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each this.sortedOrder as |item index|}}
+          <tr>
+            <th>{{increment-index index}}</th>
+            {{#each item as |property|}}
+            <td class="has-text-weight-semibold is-capitalized">{{property}}</td>
+            {{/each}}
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+  
